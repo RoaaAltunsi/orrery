@@ -1,0 +1,98 @@
+export const PLANET_DATA = {
+    Mercury: {
+        color: '#a8a8a8',
+        type: 'Terrestrial',
+        diameter: '4,879 km',
+        distFromSun: '0.39 AU',
+        orbitalPeriod: '88 Earth days',
+        dayLength: '1,408 hrs',
+        moons: 0,
+        avgTemp: '167 °C',
+        description:
+            'The smallest planet and closest to the Sun. Without a real atmosphere, Mercury swings from −180 °C at night to 430 °C during the day — one of the most extreme temperature ranges in the solar system.',
+    },
+    Venus: {
+        color: '#e8cda0',
+        type: 'Terrestrial',
+        diameter: '12,104 km',
+        distFromSun: '0.72 AU',
+        orbitalPeriod: '225 Earth days',
+        dayLength: '5,832 hrs',
+        moons: 0,
+        avgTemp: '464 °C',
+        description:
+            'The hottest planet because of a runaway greenhouse effect. Venus rotates backward, so the Sun rises in the west, and its rotational day is longer than its year.',
+    },
+    Earth: {
+        color: '#4fa3e0',
+        type: 'Terrestrial',
+        diameter: '12,756 km',
+        distFromSun: '1.00 AU',
+        orbitalPeriod: '365.25 days',
+        dayLength: '23.9 hrs',
+        moons: 1,
+        avgTemp: '15 °C',
+        description:
+            'Our home planet — the only known world to support life. Liquid oceans cover about 71% of the surface, and Earth’s magnetic field helps shield it from harmful solar radiation.',
+    },
+    Mars: {
+        color: '#c1440e',
+        type: 'Terrestrial',
+        diameter: '6,792 km',
+        distFromSun: '1.52 AU',
+        orbitalPeriod: '687 Earth days',
+        dayLength: '24.6 hrs',
+        moons: 2,
+        avgTemp: '−65 °C',
+        description:
+            'The Red Planet is home to Olympus Mons, the tallest volcano in the solar system. Its thin carbon-dioxide atmosphere, polar ice caps, and ancient river channels point to a wetter past.',
+    },
+    Jupiter: {
+        color: '#c88b3a',
+        type: 'Gas Giant',
+        diameter: '142,976 km',
+        distFromSun: '5.20 AU',
+        orbitalPeriod: '12 Earth years',
+        dayLength: '9.9 hrs',
+        moons: 95,
+        avgTemp: '−110 °C',
+        description:
+            'The largest planet in the solar system. Its Great Red Spot is a giant long-lived storm, and Jupiter gives off more heat than it receives from the Sun.',
+    },
+    Saturn: {
+        color: '#e4c97e',
+        type: 'Gas Giant',
+        diameter: '120,536 km',
+        distFromSun: '9.54 AU',
+        orbitalPeriod: '29.4 years',
+        dayLength: '10.7 hrs',
+        moons: 146,
+        avgTemp: '−140 °C',
+        description:
+            'Best known for its bright ring system made mostly of ice and rock. Saturn is the least dense planet in the solar system and has powerful high-speed winds.',
+    },
+    Uranus: {
+        color: '#7de8e8',
+        type: 'Ice Giant',
+        diameter: '51,118 km',
+        distFromSun: '19.2 AU',
+        orbitalPeriod: '84 years',
+        dayLength: '17.2 hrs',
+        moons: 28,
+        avgTemp: '−195 °C',
+        description:
+            'Uranus rotates on its side, with an axial tilt of about 98°, making it unique among the planets. Its blue-green color comes from methane in the atmosphere.',
+    },
+    Neptune: {
+        color: '#3f6cba',
+        type: 'Ice Giant',
+        diameter: '49,528 km',
+        distFromSun: '30.06 AU',
+        orbitalPeriod: '165 years',
+        dayLength: '16 hrs',
+        moons: 16,
+        avgTemp: '−200 °C',
+        description:
+            'Neptune is the windiest planet in the solar system and was the first planet discovered through mathematical prediction before direct observation.',
+    },
+}
