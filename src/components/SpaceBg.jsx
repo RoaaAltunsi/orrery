@@ -7,12 +7,18 @@ function SpaceBg() {
 
    useEffect(() => {
       // ---------------- Build the raw positions array ----------------
-      const starCount = 6000;
+      const starCount = 18000;
+      const innerRadius = 3000;
+      const outerRadius = 7000;
       const positions = new Float32Array(starCount * 3);
       for (let i = 0; i < starCount; i++) {
-         positions[i * 3 + 0] = (Math.random() - 0.5) * 600; // x
-         positions[i * 3 + 1] = (Math.random() - 0.5) * 600; // y
-         positions[i * 3 + 2] = (Math.random() - 0.5) * 600; // z
+         const radius = innerRadius + Math.random() * (outerRadius - innerRadius);
+         const theta = Math.random() * Math.PI * 2;
+         const phi = Math.acos(2 * Math.random() - 1);
+
+         positions[i * 3 + 0] = radius * Math.sin(phi) * Math.cos(theta); // x
+         positions[i * 3 + 1] = radius * Math.cos(phi); // y
+         positions[i * 3 + 2] = radius * Math.sin(phi) * Math.sin(theta); // z
       }
 
       // -------- Create the BufferGeometry and attach positions --------
@@ -43,7 +49,8 @@ function SpaceBg() {
 
       // ------------------- Create the PointsMaterial -------------------
       const mat = new THREE.PointsMaterial({
-         size: 0.7,
+         size: 0.9,
+         sizeAttenuation: false,
          map: starSprite,
          transparent: true,
          depthWrite: false,
@@ -53,6 +60,7 @@ function SpaceBg() {
       
       // --------- Build the Points mesh and add it to the scene ---------
       const stars = new THREE.Points(geo, mat);
+      stars.frustumCulled = false;
       scene.add(stars);
 
       // ---------------------- Cleanup on unmount -----------------------
